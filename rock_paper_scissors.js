@@ -167,9 +167,18 @@ function checkWinner() {
 
     if (computerScore == 5) {
         console.log("Computer wins");
+
+        const rockButton = document.getElementById('rock-button');
+        rockButton.disabled = true;
+
+        const paperButton = document.getElementById('paper-button');
+        paperButton.disabled = true;
+
+        const scissorsButton = document.getElementById('scissors-button');
+        scissorsButton.disabled = true;
     }
 }
 
 function displayPlayerWins() {
-    
+
 }
