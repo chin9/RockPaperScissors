@@ -64,3 +64,112 @@ function game() {
     let computerSelection4 = computerPlay();
     console.log(playRound(playerSelection4 , computerSelection4));
 }
+
+
+
+document.getElementById("rock-button").addEventListener("click", function(){
+            playGamePlayerRock();
+        })
+
+document.getElementById("paper-button").addEventListener("click", function(){
+            playGamePlayerPaper();
+        })
+
+document.getElementById("scissors-button").addEventListener("click", function(){
+            playGamePlayerScissors();
+        })
+
+
+function playGamePlayerRock() {
+    let computerSelection = computerPlay();
+
+    let text = document.getElementById('computer-score-id').textContent;
+    console.log(text);
+    console.log("rock");
+
+    if (computerSelection == "Paper") {
+        let num = parseInt(document.getElementById('computer-score-id').textContent);
+        num ++;
+        document.getElementById('computer-score-id').textContent = num;
+        console.log(num);
+    } else if (computerSelection == "Scissors") {
+        let num = parseInt(document.getElementById('player-score-id').textContent);
+        num ++;
+        document.getElementById('player-score-id').textContent = num;
+        console.log(num);
+    }
+
+    checkWinner();
+}
+
+function playGamePlayerPaper() {
+    let computerSelection = computerPlay();
+
+    let text = document.getElementById('computer-score-id').textContent;
+
+
+    if (computerSelection == "Scissors") {
+        let num = parseInt(document.getElementById('computer-score-id').textContent);
+        num ++;
+        document.getElementById('computer-score-id').textContent = num;
+        console.log(num);
+    } else if (computerSelection == "Rock") {
+        let num = parseInt(document.getElementById('player-score-id').textContent);
+        num ++;
+        document.getElementById('player-score-id').textContent = num;
+        console.log(num);
+    }
+
+    checkWinner();
+
+}
+
+function playGamePlayerScissors() {
+    let computerSelection = computerPlay();
+
+    let text = document.getElementById('computer-score-id').textContent;
+
+
+    if (computerSelection == "Rock") {
+        let num = parseInt(document.getElementById('computer-score-id').textContent);
+        num ++;
+        document.getElementById('computer-score-id').textContent = num;
+        console.log(num);
+    } else if (computerSelection == "Paper") {
+        let num = parseInt(document.getElementById('player-score-id').textContent);
+        num ++;
+        document.getElementById('player-score-id').textContent = num;
+        console.log(num);
+    }
+
+    checkWinner();
+
+}
+
+function checkWinner() {
+
+    let playerScore = parseInt(document.getElementById('player-score-id').textContent);
+    let computerScore = parseInt(document.getElementById('computer-score-id').textContent);
+
+    if (playerScore == 5) {
+        console.log("Player wins");
+        const rockButton = document.getElementById('rock-button');
+        rockButton.disabled = true;
+
+        const paperButton = document.getElementById('paper-button');
+        paperButton.disabled = true;
+
+        const scissorsButton = document.getElementById('scissors-button');
+        scissorsButton.disabled = true;
+
+        displayPlayerWins();
+    }
+
+    if (computerScore == 5) {
+        console.log("Computer wins");
+    }
+}
+
+function displayPlayerWins() {
+    
+}

@@ -1,0 +1,149 @@
+/*TITLE AREA*/
+header {
+    text-align: center;
+    
+    width: 100%;
+    height: 50px;
+
+    margin-top:35px;
+
+    color: #fbe6d3;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    text-shadow: -1px -1px 0 #3e2e6a, 1px -1px 0 #3e2e6a, -1px 1px 0 #3e2e6a, 1px 1px 0 #3e2e6a;
+
+}
+
+header div.rock-paper-scissors {
+    font-size: 5vw;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-weight: 900;
+}
+
+/* ROCK PAPER SCISSORS AREA */
+
+body{
+    background-color:rgb(247, 238, 248)
+}
+body .rock-paper-scissors-container{
+    height: 50vh;
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+body .rock {
+    grid-column: 1 / 2;
+    background: url(rock-icon.jpeg) no-repeat;
+    background-position: center;
+
+}
+
+body .rock:hover {
+    box-shadow: 0 0 20px rgba(255, 4, 222, 0.877); 
+}
+
+body .paper {
+    grid-column: 2 / 3;
+    background: url("https://img.icons8.com/ios/100/000000/hand.png") no-repeat;
+    background-position: center;
+    background-size: 35%;
+}
+
+body .paper:hover {
+    box-shadow: 0 0 20px rgba(4, 255, 234, 0.877); 
+}
+
+body .scissors {
+    grid-column: 3 / 4;
+    background: url("https://img.icons8.com/ios/100/000000/hand-scissors--v1.png") no-repeat;
+    background-position: center;
+    background-size: 35%;
+}
+
+body .scissors:hover {
+    box-shadow: 0 0 20px rgba(4, 255, 171, 0.877); 
+}
+
+/*SCORE PANEL*/
+
+.scores-container {
+    margin-top: 50px;
+    height: 20vh;
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.player-score-container {
+
+    display: block;
+}
+
+.player-score {
+    height: 75%;
+    text-align: center;
+    font-size: 50px;
+
+    color: rgba(172, 106, 172, 1);
+	font-family: 'Righteous', cursive;
+}
+
+.player-name {
+    font-size: 45px;
+    text-align: center;
+
+    position: relative;
+    left: 100px;
+
+    transform: translate(-50%, -50%);
+  /* font-size:120px; */
+	letter-spacing:0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 
+						2px 2px #ff1f8f,
+						8px 8px #000000;
+
+}
+
+.computer-score-container {
+
+    display: block;
+}
+
+.computer-score {
+    height: 75%;
+    text-align: center;
+    font-size: 50px;
+
+    color: rgba(172, 106, 172, 1);
+	font-family: 'Righteous', cursive;
+}
+
+.computer-name {
+    font-size: 45px;
+    text-align: center;
+
+    position: relative;
+    left: 140px;;
+
+    transform: translate(-50%, -50%);
+  /* font-size:120px; */
+	letter-spacing:0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 
+						2px 2px #ff1f8f,
+						8px 8px #000000;
+
+}
