@@ -25,14 +25,42 @@ header div.rock-paper-scissors {
     font-weight: 900;
 }
 
+/*STATUS AREA*/
+
+.status-container {
+    text-align: center;
+    justify-content: center;
+    margin-top: 10vh;
+
+    font-family: 'Fira Code', monospace;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+
+
+}
+
+.win-or-lose {
+    text-align: center;
+    justify-content: center;
+    margin-top: 5vh;
+
+    font-family: 'Fira Code', monospace;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+
+
 /* ROCK PAPER SCISSORS AREA */
 
 body{
     background-color:rgb(247, 238, 248)
 }
 body .rock-paper-scissors-container{
-    height: 50vh;
-    margin-top: 60px;
+    height: 30vh;
+    margin-top: 50px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -46,7 +74,8 @@ body .rock {
 }
 
 body .rock:hover {
-    box-shadow: 0 0 20px rgba(255, 4, 222, 0.877); 
+    box-shadow: 0 0 20px rgba(255, 4, 222, 0.877);
+    cursor: pointer; 
 }
 
 body .paper {
@@ -57,7 +86,9 @@ body .paper {
 }
 
 body .paper:hover {
-    box-shadow: 0 0 20px rgba(4, 255, 234, 0.877); 
+    box-shadow: 0 0 20px rgba(4, 255, 234, 0.877);
+    cursor: pointer; 
+ 
 }
 
 body .scissors {
@@ -69,12 +100,14 @@ body .scissors {
 
 body .scissors:hover {
     box-shadow: 0 0 20px rgba(4, 255, 171, 0.877); 
+    cursor: pointer; 
+
 }
 
 /*SCORE PANEL*/
 
 .scores-container {
-    margin-top: 50px;
+    margin-top: 30px;
     height: 20vh;
 
     display: flex;

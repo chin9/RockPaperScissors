@@ -83,6 +83,8 @@ document.getElementById("scissors-button").addEventListener("click", function(){
 function playGamePlayerRock() {
     let computerSelection = computerPlay();
 
+    document.getElementById("status").textContent = `Computer plays: ${computerSelection}`
+
     let text = document.getElementById('computer-score-id').textContent;
     console.log(text);
     console.log("rock");
@@ -104,6 +106,8 @@ function playGamePlayerRock() {
 
 function playGamePlayerPaper() {
     let computerSelection = computerPlay();
+    document.getElementById("status").textContent = `Computer plays: ${computerSelection}`
+
 
     let text = document.getElementById('computer-score-id').textContent;
 
@@ -126,6 +130,8 @@ function playGamePlayerPaper() {
 
 function playGamePlayerScissors() {
     let computerSelection = computerPlay();
+    document.getElementById("status").textContent = `Computer plays: ${computerSelection}`
+
 
     let text = document.getElementById('computer-score-id').textContent;
 
@@ -176,9 +182,16 @@ function checkWinner() {
 
         const scissorsButton = document.getElementById('scissors-button');
         scissorsButton.disabled = true;
+
+        displayPlayerLoses();
     }
 }
 
 function displayPlayerWins() {
+    document.getElementById("win-lose").textContent = "YOU WIN!!"
+}
+
+function displayPlayerLoses() {
+    document.getElementById("win-lose").textContent = "You lose :("
 
 }
